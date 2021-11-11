@@ -64,9 +64,13 @@ document.querySelector(".close_btn").addEventListener("click", function(){
 let navbar_btn = document.querySelector("#nav-toggler");
 navbar_btn.addEventListener("click", function(){
     if(!navbar_btn.classList.contains("collapsed")){
-        document.querySelector('.navbar-sizing').style = "background-color: white"; 
+        document.querySelector('.navbar-sizing').style = "background-color: white";
+        document.querySelector('.navbar-toggler-icon').style = "background-image: url(images/whiteX.svg) !important";
     }
-    else document.querySelector('.navbar-sizing').style = "background-color: transparent"; 
+    else {
+        document.querySelector('.navbar-sizing').style = "background-color: transparent"; 
+        document.querySelector('.navbar-toggler-icon').style = "background-image: url(images/burger.svg) !important";
+    }
 
 })
 
