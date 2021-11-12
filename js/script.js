@@ -11,6 +11,9 @@ document.querySelector(".certification-btn").addEventListener("click", function(
     
 })
 
+let customerName = document.querySelector(".customerName");
+let customerPhone = document.querySelector(".customerPhone");
+
 document.querySelector(".open_popUp").addEventListener("click", function(){
     let elem = document.querySelector('.pop-up-first');
     elem.classList.remove('d-none');
@@ -25,30 +28,23 @@ document.querySelector(".open_popUp").addEventListener("click", function(){
             close.classList.add('d-none');
         });
 
-        document.querySelector(".close_second").addEventListener("click", function(){
-            let close = document.querySelector('.pop-up-second');
-            close.classList.add('d-none');
-        });
 
-        // const checkbox = document.querySelector('.custom-control-input');
-        // checkbox.addEventListener('change', () => {
-        //     if ( checkbox.checked ) {
-                
-        //     }
-        // });
-
-        
 
         document.querySelector(".pop-up_second_card_selection__button").addEventListener("click", function(){
-            elem2.classList.add('d-none');
 
-            let elem3 = document.querySelector('.pop-up-third');
-            elem3.classList.remove('d-none');
-            
-            document.querySelector(".close_third").addEventListener("click", function(){
-                let close = document.querySelector('.pop-up-third');
-                close.classList.add('d-none');
-            });
+            if(customerName.value !== '' && customerPhone.value !== ''){
+                elem2.classList.add('d-none');
+    
+                let elem3 = document.querySelector('.pop-up-third');
+                elem3.classList.remove('d-none');
+                
+                document.querySelector(".close_third").addEventListener("click", function(){
+                    let close = document.querySelector('.pop-up-third');
+                    close.classList.add('d-none');
+                });
+
+            }
+
         })
     })
 
@@ -80,6 +76,7 @@ let curtainSize = 'small';
 let image = document.querySelector('.pop-up_card_img');
 let image2 = document.querySelector('.pop-up_second_card_img');
 let priceText = document.querySelector('.price');
+let priceTextAlt = document.querySelector('.price1');
 
 
 
@@ -103,21 +100,19 @@ function formRadioColor(){
 }
 
 function chng(){
-    if(curtainColor == 'gold'){
-        document.querySelector("#customRadio3").disabled = true;
-    }
-    if(curtainColor !== 'gold'){
-        document.querySelector("#customRadio3").disabled = false;
-    }
-    if(curtainColor == 'gold' && curtainSize == 'small') {
+    if(curtainColor == 'yellow' && curtainSize == 'small') {
         image.style = 'background-image: url(images/variable/12.png);';
         image2.style = 'background-image: url(images/variable/12.png);';
     }
-    if(curtainColor == 'gold' && curtainSize == 'medium') {
+    if(curtainColor == 'yellow' && curtainSize == 'medium') {
         image.style = 'background-image: url(images/variable/2х2.png);';
         image2.style = 'background-image: url(images/variable/2х2.png);';
     }
-    if(curtainColor == 'gold' && curtainSize == 'extraLarge') {
+    if(curtainColor == 'yellow' && curtainSize == 'large') {
+        image.style = 'background-image: url(images/variable/3x2.png);';
+        image2.style = 'background-image: url(images/variable/3x2.png);';
+    }
+    if(curtainColor == 'yellow' && curtainSize == 'extraLarge') {
         image.style = 'background-image: url(images/variable/3х3.png);';
         image2.style = 'background-image: url(images/variable/3х3.png);';
     }
@@ -158,10 +153,23 @@ function chng(){
         image2.style = 'background-image: url(images/variable/multicolorxl.png);';
     }
 
-    if(curtainSize == 'small') priceText.innerHTML = '490 грн.';
-    if(curtainSize == 'medium') priceText.innerHTML = '590 грн.';
-    if(curtainSize == 'large') priceText.innerHTML = '790 грн.';
-    if(curtainSize == 'extraLarge') priceText.innerHTML = '990 грн.';
+    if(curtainSize == 'small'){
+        priceText.innerHTML = '490 грн.'; 
+        priceTextAlt.innerHTML = '490 грн.';
+
+    } 
+    if(curtainSize == 'medium') {
+        priceText.innerHTML = '590 грн.'; 
+        priceTextAlt.innerHTML = '590 грн.';
+    }
+    if(curtainSize == 'large') {
+        priceText.innerHTML = '790 грн.'; 
+        priceTextAlt.innerHTML = '790 грн.';
+    }
+    if(curtainSize == 'extraLarge') {
+        priceText.innerHTML = '990 грн.'; 
+        priceTextAlt.innerHTML = '990 грн.';
+    }
 }
 
 

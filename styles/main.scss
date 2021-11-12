@@ -24,6 +24,10 @@
     font-size: 18px;
     font-family: "Open Sans Regular";
 }
+.navbar-nav{
+    display: flex;
+    align-items: center;
+}
 .collapsing {
     transition: 0s;
 }
@@ -58,12 +62,21 @@ h3 {
     font-family: "Open Sans Bold";
     line-height: 120%;
 }
+.number-link{
+    color: #ffffff;
+    text-decoration: none;
+}
+.number-link:visited{
+    color: #ffffff;
+}
+
+
 .header {
     height: 1024px;
     background: url("../images/background-header.jpg") no-repeat center;
 
     &_center {
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(4px);
         border-radius: 99px;
         width: 658px;
@@ -416,6 +429,7 @@ h3 {
         border: 3px solid #000000;
         box-sizing: border-box;
         border-radius: 40px;
+        color: #000000;
     }
     .buy_btn:hover {
         background: #d5d5d5;
@@ -855,7 +869,6 @@ h3 {
     .navbar-nav {
         position: absolute;
         z-index: 5;
-        align-items: center;
         background: rgb(255, 255, 255);
         width: 100%;
     }
@@ -877,6 +890,7 @@ h3 {
         padding-right: 20px;
         padding-top: 15px;
     }
+    
     .icon {
         margin-left: 20px;
     }

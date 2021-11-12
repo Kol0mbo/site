@@ -59,6 +59,15 @@
   font-family: "Open Sans Regular";
 }
 
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .collapsing {
   -webkit-transition: 0s;
   transition: 0s;
@@ -100,13 +109,22 @@ h3 {
   line-height: 120%;
 }
 
+.number-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.number-link:visited {
+  color: #ffffff;
+}
+
 .header {
   height: 1024px;
   background: url("../images/background-header.jpg") no-repeat center;
 }
 
 .header_center {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0, 0, 0, 0.45);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   border-radius: 99px;
@@ -545,6 +563,7 @@ h3 {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 40px;
+  color: #000000;
 }
 
 .pop-up .buy_btn:hover {
@@ -1016,9 +1035,6 @@ h3 {
   .navbar-nav {
     position: absolute;
     z-index: 5;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     background: white;
     width: 100%;
   }
